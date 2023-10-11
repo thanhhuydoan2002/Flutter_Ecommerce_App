@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce_app/views/splash_screen.dart';
 import 'consts/consts.dart';
 
 void main() {
@@ -11,8 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Centeree",
-      theme: ThemeData(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.transparent,
+        appBarTheme:  const AppBarTheme(backgroundColor: Colors.transparent),
+        fontFamily: regular,
+      ),
+      home: const SplashScreen(),
     );
   }
 }

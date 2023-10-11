@@ -1,3 +1,4 @@
 const appname = "Centeree";
-const appversion = "Version 1.0.0";
-const credits = "@thanhhuy2002";
+const appversion = "v1.0.0";
+const credits = "@thanhhuydoan2002";
+const des = "$credits $appversion";
