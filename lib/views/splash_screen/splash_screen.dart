@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
 import 'package:flutter_ecommerce_app/views/auth_screen/login_screen.dart';
+import 'package:flutter_ecommerce_app/views/auth_screen/register_screen.dart';
 import 'package:flutter_ecommerce_app/widget_common/applogo_widget.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.black87,
       body: Center(
         child: Column(
           children: [
@@ -42,9 +43,9 @@ class _SplashScreenState extends State<SplashScreen> {
             20.heightBox,
             applogoWidget(),
             10.heightBox,
-            appname.text.fontFamily(bold).size(35).make(),
+            appname.text.fontFamily(bold).size(35).white.make(),
             const Spacer(),
-            des.text.fontFamily(semibold).size(10).make(),
+            des.text.fontFamily(semibold).size(10).white.make(),
             30.heightBox,
             //Splash Screen UI
           ],
