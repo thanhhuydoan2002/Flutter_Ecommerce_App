@@ -3,7 +3,7 @@ const appversion = "v1.0.0";
 const credits = "@thanhhuydoan2002";
 const des = "$credits $appversion";
 
-//auth const
+//auth strings
 const email = "Email";
 const emailHint = "admin@admin.com";
 const name = "Name";
@@ -23,4 +23,14 @@ const privacyPolicy = "Privacy Policy";
 const termAndCond = "Terms and Conditions";
 const alreadyHaveAccount = "Already have account? ";
 
+//home strings
+const home = "Home", categories = "Categories", cart = "Cart", account = "Account";
 
+//home screen strings
+const searchAnyThing = "Search anything...",
+    todayDeal = "Today's Deal",
+    flashSale = "Flash Sale",
+    topSellers = "Top Sellers",
+    brand = "Brand",
+    topCategories = "Top Categories",
+    featuredCategories = "Featured Categories";
