@@ -1,12 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
+import 'package:flutter_ecommerce_app/views/cart_screen/cart_screen.dart';
+import 'package:flutter_ecommerce_app/views/category_screen/category_screen.dart';
+import 'package:flutter_ecommerce_app/views/home_screen/home_screen.dart';
+import 'package:flutter_ecommerce_app/views/profile_screen/profile_screen.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import '../../controllers/home_controller.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +25,10 @@ class HomeScreen extends StatelessWidget {
     ];
 
     var navBody = [
-      Container(color: Colors.blue,),
-      Container(color: Colors.amber,),
-      Container(color: Colors.purple,),
-      Container(color: Colors.cyan,),
+      const HomeScreen(),
+      const CategoryScreen(),
+      const CartScreen(),
+      const ProfileScreen(),
     ];
 
     return Scaffold(
@@ -38,10 +42,11 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: Obx(() =>
           BottomNavigationBar(
             currentIndex: controller.currentNavIndex.value,
-            selectedItemColor: blackColor,
+            selectedItemColor: whiteColor,
+            unselectedItemColor: lightGrey,
             selectedLabelStyle: const TextStyle(fontFamily: semibold),
             type: BottomNavigationBarType.fixed,
-            backgroundColor: whiteColor,
+            backgroundColor: blackColor,
             items: navbarItem,
             onTap: (value){
               controller.currentNavIndex.value = value;

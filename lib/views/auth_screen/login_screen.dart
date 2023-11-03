@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/lists.dart';
 import 'package:flutter_ecommerce_app/views/auth_screen/register_screen.dart';
+import 'package:flutter_ecommerce_app/views/home_screen/home.dart';
 import 'package:flutter_ecommerce_app/widget_common/applogo_widget.dart';
 import 'package:flutter_ecommerce_app/widget_common/bg_widget.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
 import 'package:flutter_ecommerce_app/widget_common/cus_button.dart';
 import 'package:flutter_ecommerce_app/widget_common/custom_textfield.dart';
+import 'package:flutter_ecommerce_app/widget_common/line_with_.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
@@ -41,30 +43,22 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     5.heightBox,
-                    cusButton(onPress: () {}, color: blackColor, color2: whiteColor, textColor: whiteColor, title: login )
+                    cusButton(onPress: () {Get.to(() => const Home());}, color: blackColor, color2: whiteColor, textColor: whiteColor, title: login )
                       .box
                       .width(context.screenWidth - 50)
                       .make(),
                     5.heightBox,
-                    RichText(
-                        text: const TextSpan(
-                          children: [
-                            TextSpan(
-                              text: doNotHaveAccount,
-                              style: TextStyle(color: fontGrey),
-                            ),
-                            TextSpan(
-                              text: "$register now",
-                              style: TextStyle(color: Colors.black, fontFamily: bold),
-                            ),
-                          ]
-                        ),
-                    ).onTap(() {
-                      Get.to(() => const RegisterScreen());
-                    }),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        doNotHaveAccount.text.color(fontGrey).fontFamily(bold).make(),
+                        register.text.color(blackColor).fontFamily(bold).make().onTap(() {Get.to(() => const RegisterScreen());}),
+                      ],
+                    ),
 
                     10.heightBox,
-                    loginWith.text.color(fontGrey).make(),
+                    lineWithText(),
                     5.heightBox,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -80,8 +74,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth - 70).shadowSm.make(),
-
-
 
               ],
             ),

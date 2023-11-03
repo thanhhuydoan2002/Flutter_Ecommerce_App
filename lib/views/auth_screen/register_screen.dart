@@ -8,8 +8,16 @@ import 'package:flutter_ecommerce_app/widget_common/custom_textfield.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  bool? isCheck = false;
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +53,14 @@ class RegisterScreen extends StatelessWidget {
                     Row(
                       children: [
                         Checkbox(
-                          checkColor: blackColor,
-                          value: false,
-                          onChanged: (newValue) {},
+                          activeColor: blackColor,
+                          checkColor: whiteColor,
+                          value: isCheck,
+                          onChanged: (newValue) {
+                            setState(() {
+                              isCheck = newValue;
+                            });
+                          },
                         ),
                         5.widthBox,
                         Expanded(
@@ -57,7 +70,7 @@ class RegisterScreen extends StatelessWidget {
                                 TextSpan(
                                   text: "I agree to the ",
                                   style: TextStyle(
-                                    fontFamily: bold,
+                                    fontFamily: regular,
                                     color: fontGrey,
                                   ),
                                 ),
@@ -65,7 +78,7 @@ class RegisterScreen extends StatelessWidget {
                                 TextSpan(
                                   text: privacyPolicy,
                                   style: TextStyle(
-                                    fontFamily: bold,
+                                    fontFamily: regular,
                                     color: blackColor,
                                   ),
                                 ),
@@ -73,7 +86,7 @@ class RegisterScreen extends StatelessWidget {
                                 TextSpan(
                                   text: " & ",
                                   style: TextStyle(
-                                    fontFamily: bold,
+                                    fontFamily: regular,
                                     color: fontGrey,
                                   ),
                                 ),
@@ -81,7 +94,7 @@ class RegisterScreen extends StatelessWidget {
                                 TextSpan(
                                   text: termAndCond,
                                   style: TextStyle(
-                                    fontFamily: bold,
+                                    fontFamily: regular,
                                     color: blackColor,
                                   ),
                                 ),
@@ -92,27 +105,24 @@ class RegisterScreen extends StatelessWidget {
                       ],
                     ),
                     5.heightBox,
-                    cusButton(onPress: () {}, color: blackColor, color2: whiteColor, textColor: whiteColor, title: register )
+                    cusButton(onPress: () {},
+                        color: blackColor,
+                        color2: whiteColor,
+                        textColor: whiteColor,
+                        title: register )
                         .box
                         .width(context.screenWidth - 50)
                         .make(),
+
                     10.heightBox,
-                    RichText(
-                      text: const TextSpan(
-                        children: [
-                          TextSpan(
-                            text: alreadyHaveAccount,
-                            style: TextStyle(fontFamily: bold, color: fontGrey),
-                          ),
-                          TextSpan(
-                            text: login,
-                            style: TextStyle(fontFamily: bold, color: blackColor),
-                          ),
-                        ]
-                      ),
-                    ).onTap(() {
-                      Get.back();
-                    }),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        alreadyHaveAccount.text.color(fontGrey).fontFamily(bold).make(),
+                        login.text.color(Colors.black).fontFamily(bold).make().onTap(() { Get.back();}),
+                      ],
+                    ),
 
                   ],
                 ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth - 70).shadowSm.make(),
