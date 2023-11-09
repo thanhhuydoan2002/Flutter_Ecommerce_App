@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
+import 'package:flutter_ecommerce_app/consts/lists.dart';
 import 'package:flutter_ecommerce_app/widget_common/cus_button.dart';
 
 class ItemDetails extends StatelessWidget {
@@ -125,18 +126,56 @@ class ItemDetails extends StatelessWidget {
                               width: 100,
                               child: "Total: ".text.color(textfieldGrey).make(),
                             ),
-                            Row(
-                              children: [
-
-                              ],
-                            ),
+                            "\$0.00".text.size(16).color(blackColor).fontFamily(bold).make(),
                           ],
                         ).box.padding(const EdgeInsets.all(8)).make(),
-
-
                       ],
                     ).box.white.shadowSm.make(),
 
+                    //description section
+                    10.heightBox,
+                    "Description".text.color(darkFontGrey).fontFamily(semibold).make(),
+                    10.heightBox,
+                    "This is a dummy item and dummy description here.. ".text.color(darkFontGrey).make(),
+
+                    //button section
+                    10.heightBox,
+
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      children: List.generate(
+                          itemDetailButtonsList.length,
+                              (index) => ListTile(
+                                title: itemDetailButtonsList[index].text.fontFamily(semibold).color(darkFontGrey).make(),
+                                trailing: const Icon(Icons.arrow_forward),
+                      ))
+                    ),
+                    20.heightBox,
+
+                    productsYouMayLike.text.size(16).fontFamily(bold).color(darkFontGrey).make(),
+
+                    10.heightBox,
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: List.generate(
+                            6, (index) => Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              imgP1,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
+                            10.heightBox,
+                            "Laptop 4GB/64GB".text.fontFamily(semibold).color(darkFontGrey).make(),
+                            10.heightBox,
+                            "\$600".text.black.fontFamily(bold).size(16).make(),
+                          ],
+                        ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make()),
+                      ),
+                    ),
                   ],
                 ),
               ),

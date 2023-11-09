@@ -10,6 +10,6 @@ Widget cusButton({onPress, color, color2,  textColor, String? title}) {
         padding: const EdgeInsets.all(12),
       ),
       onPressed: onPress,
-      child: title!.text.color(textColor).fontFamily(bold).make(),
+      child: title!.text.size(16).color(textColor).fontFamily(bold).make(),
   );
 }
