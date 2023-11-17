@@ -8,3 +8,6 @@ const Color whiteColor = Color.fromRGBO(255, 255, 255, 1);
 const Color lightGrey = Color.fromRGBO(239, 239, 239, 1);
 const Color blackColor = Color.fromRGBO(0, 0, 0, 1.0);
 const Color golden = Color.fromRGBO(255, 168, 0, 1);
+
+const Color primaryYellow = Color.fromRGBO(255, 235, 59, 1);
+const Color priceYellow = Color.fromRGBO(255, 221, 0, 1.0);

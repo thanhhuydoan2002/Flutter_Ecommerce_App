@@ -1,5 +1,4 @@
 import 'package:flutter_ecommerce_app/consts/consts.dart';
-import 'package:flutter_ecommerce_app/consts/images.dart';
 
 const socialIconList = [icFacebookLogo, icGoogleLogo];
 
@@ -16,3 +15,6 @@ const categoriesList = [womenClothing,menClothing,compAccess,automobile,kidToys,
 const categoryImages = [imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6,imgFc7,imgFc8,imgFc9];
 
 const itemDetailButtonsList = [video,reviews,sellerPolicy,returnPolicy,supportPolicy];
+
+const profileButtonsList = [orders, wishlist, messages];
+const profileButtonsIcon = [icOrders, icOrders, icMessages];

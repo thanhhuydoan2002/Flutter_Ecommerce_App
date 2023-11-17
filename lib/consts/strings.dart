@@ -1,4 +1,4 @@
-const appname = "Centeree";
+const appname = "Lemon";
 const appversion = "v1.0.0";
 const credits = "@thanhhuydoan2002";
 const des = "$credits $appversion";
@@ -16,6 +16,7 @@ const forgetPass = "Forget Password";
 
 
 const login = "Login";
+const logout = "Logout";
 const register = "Register";
 const doNotHaveAccount = "Don't have account? ";
 const loginWith = "Login with";
@@ -61,3 +62,6 @@ const video = "Video",
     returnPolicy = "Return Policy",
     supportPolicy = "Support Policy",
     productsYouMayLike = "Products you may also like";
+
+//profile strings
+const wishlist = "My Wishlist", orders = "My Orders", messages = "Messages";

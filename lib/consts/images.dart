@@ -1,6 +1,7 @@
 //icons
 const icAdd = "assets/icons/add.png";
 const icAppLogo = "assets/icons/app_logo.png";
+const icAppLogo2 = "assets/icons/app_logo_2.png";
 const icAppleLogo = "assets/icons/apple_logo.png";
 const icArrow = "assets/icons/arrow.png";
 const icBell = "assets/icons/bell.png";
