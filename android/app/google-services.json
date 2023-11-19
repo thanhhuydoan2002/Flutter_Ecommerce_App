@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "650838283841",
+    "project_id": "lemon-647f3",
+    "storage_bucket": "lemon-647f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650838283841:android:42eb3f4c384525009a18c0",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ecommerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC6kFSUR8SfDMUf4t3iw2UFTwcBYhZHVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
