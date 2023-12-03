@@ -1,10 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
 import 'package:flutter_ecommerce_app/views/auth_screen/login_screen.dart';
-import 'package:flutter_ecommerce_app/views/auth_screen/register_screen.dart';
 import 'package:flutter_ecommerce_app/widget_common/applogo_widget.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+
+import '../home_screen/home.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,11 +15,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  //creating a method to change screen
+  //SPLASH SCREEN TO LOGIN SCREEN
   changeScreen(){
     Future.delayed(const Duration(seconds: 3), () {
       //using getX
-      Get.to(() => const LoginScreen());
+      //Get.to(() => const LoginScreen());
+      auth.authStateChanges().listen((User ? user) {
+        if(user == null && mounted){
+          Get.to(() => const LoginScreen());
+        } else {
+          Get.to(() => const Home());
+        }
+      });
     });
   }
 
@@ -32,18 +40,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: whiteColor,
       body: Center(
         child: Column(
           children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Image.asset(icSplashBg, width: 300),
-            ),
-            20.heightBox,
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: Image.asset(icSplashBg, width: 300),
+            // ),
+            320.heightBox,
             applogoWidget(),
             10.heightBox,
-            appname.text.fontFamily(bold).size(35).white.make(),
+            appname.text.fontFamily(bold).size(35).color(logoYellow).make(),
             const Spacer(),
             des.text.fontFamily(semibold).size(10).white.make(),
             30.heightBox,

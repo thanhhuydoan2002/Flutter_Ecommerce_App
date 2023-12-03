@@ -171,7 +171,7 @@ class ItemDetails extends StatelessWidget {
                             10.heightBox,
                             "Laptop 4GB/64GB".text.fontFamily(semibold).color(darkFontGrey).make(),
                             10.heightBox,
-                            "\$600".text.black.fontFamily(bold).size(16).make(),
+                            "\$600".text.color(priceYellow).fontFamily(bold).size(16).make(),
                           ],
                         ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make()),
                       ),
@@ -184,7 +184,7 @@ class ItemDetails extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             height: 60,
-            child: cusButton(onPress: () {}, color: blackColor, color2: whiteColor, textColor: whiteColor, title: "Add to cart" ),
+            child: cusButton(onPress: () {}, color: primaryYellow, textColor: whiteColor, title: "Add to cart" ),
           )
         ],
       ),

@@ -20,6 +20,10 @@ const logout = "Logout";
 const register = "Register";
 const doNotHaveAccount = "Don't have account? ";
 const loginWith = "Login with";
+
+const logedin = "Login Successfully";
+const logedout = "Logout Successfully";
+
 const privacyPolicy = "Privacy Policy";
 const termAndCond = "Terms and Conditions";
 const alreadyHaveAccount = "Already have account? ";

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
 import 'package:flutter_ecommerce_app/views/cart_screen/cart_screen.dart';
@@ -6,7 +5,6 @@ import 'package:flutter_ecommerce_app/views/category_screen/category_screen.dart
 import 'package:flutter_ecommerce_app/views/home_screen/home_screen.dart';
 import 'package:flutter_ecommerce_app/views/profile_screen/profile_screen.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import '../../controllers/home_controller.dart';
 
 class Home extends StatelessWidget {
@@ -42,11 +40,11 @@ class Home extends StatelessWidget {
       bottomNavigationBar: Obx(() =>
           BottomNavigationBar(
             currentIndex: controller.currentNavIndex.value,
-            selectedItemColor: whiteColor,
-            unselectedItemColor: lightGrey,
+            selectedItemColor: primaryYellow,
+            unselectedItemColor: darkGrey,
             selectedLabelStyle: const TextStyle(fontFamily: semibold),
             type: BottomNavigationBarType.fixed,
-            backgroundColor: blackColor,
+            backgroundColor: whiteColor,
             items: navbarItem,
             onTap: (value){
               controller.currentNavIndex.value = value;

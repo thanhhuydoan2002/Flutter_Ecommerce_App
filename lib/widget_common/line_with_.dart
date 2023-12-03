@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/consts/consts.dart';
 
 class lineWithText extends StatelessWidget {
+  const lineWithText({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
